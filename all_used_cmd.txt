@@ -1,0 +1,44 @@
+git init
+
+touch change1.txt
+git add change1.txt
+git commit -m "change number one"
+
+https://github.com/as-dev035/git-homework
+
+git remote add origin https://github.com/as-dev035/git-homework
+git fetch
+git branch --set-upstream-to=origin/main main
+git push -fetch
+
+git checkout -b "develop"
+git push -u origin develop
+
+git checkout -b "develop_more"
+
+git add .
+git commit -m "new change from develop_more"
+git push -u origin develop_more
+
+git clone https://github.com/as-dev035/git-homework.git
+cd git-homework
+
+git checkout -b "develop_clone"
+
+git add .
+git commit -m "change from develop_clone"
+git push -u origin develop_clone
+
+git fetch
+git checkout develop
+
+
+git merge develop_more
+
+git merge develop_clone
+
+#accept both
+git add .
+git commit -m "merge all develop changes"
+git push
+
